@@ -43,6 +43,27 @@ return [
             'radio marketer'=>'بازاریاب',
             'radio branch'=>'شعبه',
             'radio center'=>'مرکز خدمات',
+            'btn create'=>'عضویت',
+            'do you have account'=>'حساب کاربری دارید؟ ',
+            'login account'=>'وارد شودید',
+            'rules'=>'سیاست حریم خصوصی و قوانین',
+            'accept'=>'اینجانب موافقم با',
+
+        ],
+
+        'index login' => [
+
+            'title login' => 'جستجوگران پیشگام پارس',
+            'mobile users'=>'شماره همراه',
+            'please type your mobile'=>'شماره همراه خود را وارد کنید',
+            'do you have forget password'=>'رمز عبور را فراموش کردید؟',
+            'password'=>'رمز عبور',
+            'remember-me'=>'به خاطر بسپار',
+            'btn login'=>'ورود',
+
+            'do you have account'=>'کاربر جدید هستید؟ ',
+            'create account'=>'یک حساب بسازید',
+
 
         ]
     ]
