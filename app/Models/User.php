@@ -14,6 +14,8 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 class User extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable,HasRoles,HasPermissions;
+    public $guard_name = 'guest';
+
 
     /**
      * The attributes that are mass assignable.

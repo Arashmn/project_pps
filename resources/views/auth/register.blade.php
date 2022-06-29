@@ -89,36 +89,14 @@
 
                         <div class="col mt-3">
                             <p class="mb-2">@lang('form.forms.index register.please choose your role')</p>
+                            @foreach ($roles as $role)
                             <div class="form-check form-check-inline">
-                                <input name="type" class="form-check-input" type="radio" value="user"
-                                    id="0" checked="">
+                                <input name="type" class="form-check-input" type="radio" value="{{ $role->name }}"
+                                    checked="">
                                 <label class="form-check-label"
-                                    for="collapsible-address-type-home">@lang('form.forms.index register.radio users')</label>
+                                    for="collapsible-address-type-home">{{ $role->persian_name }}</label>
                             </div>
-                            <div class="form-check form-check-inline">
-                                <input name="type" class="form-check-input" type="radio" value="marketer"
-                                    id="1">
-                                <label class="form-check-label" for="collapsible-address-type-office">
-                                    @lang('form.forms.index register.radio marketer') </label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <input name="type" class="form-check-input" type="radio" value="envoy"
-                                    id="2">
-                                <label class="form-check-label" for="collapsible-address-type-office">
-                                    @lang('form.forms.index register.radio envoy') </label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <input name="type" class="form-check-input" type="radio" value="branch"
-                                    id="3">
-                                <label class="form-check-label" for="collapsible-address-type-office">
-                                    @lang('form.forms.index register.radio branch') </label>
-                            </div>
-                            <div class="form-check form-check-inline" style="margin-right: 36px">
-                                <input name="type" class="form-check-input" type="radio" value="center"
-                                    id="4">
-                                <label class="form-check-label" for="collapsible-address-type-office">
-                                    @lang('form.forms.index register.radio center')</label>
-                            </div>
+                            @endforeach
                         </div>
 
                         <button class="btn btn-primary d-grid w-100" id="sub1" disabled="disabled"

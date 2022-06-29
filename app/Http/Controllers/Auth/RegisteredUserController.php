@@ -12,6 +12,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rules;
+use Spatie\Permission\Models\Role;
 
 class RegisteredUserController extends Controller
 {
@@ -22,7 +23,8 @@ class RegisteredUserController extends Controller
      */
     public function create()
     {
-        return view('auth.register');
+        $roles=Role::where('type_id','1')->get();
+        return view('auth.register',compact('roles'));
     }
 
     /**
@@ -35,12 +37,12 @@ class RegisteredUserController extends Controller
      */
     public function store(RegisterRequest $request)
     {
-
-        dd($request->all());
-        $users=User::create($request->all());
+        // dd($request->all());
+        $user=User::create($request->all());
+        $t=$user->assignRole($request->type);
+        dd($t);
 
         // event(new Registered($user));
-
         // Auth::login($user);
         // return redirect(RouteServiceProvider::HOME);
     }
