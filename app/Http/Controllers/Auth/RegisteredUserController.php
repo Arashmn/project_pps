@@ -2,17 +2,18 @@
 
 namespace App\Http\Controllers\Auth;
 
-use App\Http\Controllers\Controller;
-use App\Http\Requests\Auth\LoginRequest;
-use App\Http\Requests\Auth\RegisterRequest;
+use App\Models\Type;
 use App\Models\User;
-use App\Providers\RouteServiceProvider;
-use Illuminate\Auth\Events\Registered;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rules;
 use Spatie\Permission\Models\Role;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Auth\Events\Registered;
+use App\Providers\RouteServiceProvider;
+use App\Http\Requests\Auth\LoginRequest;
+use App\Http\Requests\Auth\RegisterRequest;
 
 class RegisteredUserController extends Controller
 {
@@ -23,7 +24,7 @@ class RegisteredUserController extends Controller
      */
     public function create()
     {
-        $roles=Role::where('type_id','1')->get();
+        $roles=Role::query()->where('type_id','1')->get();
         return view('auth.register',compact('roles'));
     }
 
@@ -37,10 +38,9 @@ class RegisteredUserController extends Controller
      */
     public function store(RegisterRequest $request)
     {
-        // dd($request->all());
         $user=User::create($request->all());
-        $t=$user->assignRole($request->type);
-        dd($t);
+        dd($user->assignRole($request->type));
+
 
         // event(new Registered($user));
         // Auth::login($user);

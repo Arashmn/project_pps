@@ -40,7 +40,7 @@
                         <x-validation />
                     </div>
 
-                    <form id="formAuthentication" class="mb-3" action="{{ route('login') }}" method="POST">
+                    <form id="formAuthentication" class="mb-3" action="{{ route('logins.store') }}" method="POST">
                         @csrf
                         <div class="mb-3">
                             <label for="email" class="form-label">@lang('form.forms.index login.mobile users')</label>
@@ -71,7 +71,7 @@
 
                     <p class="text-center">
                         <span>@lang('form.forms.index login.do you have account')</span>
-                        <a href="{{ route('register') }}">
+                        <a href="{{ route('registers.index') }}">
                             <span>@lang('form.forms.index login.create account')</span>
                         </a>
                     </p>

@@ -4,7 +4,7 @@ return [
 
     'Dadatable'=>[
 
-        'search filter'=>'فیلتر کردن نام',
+        'search filter'=>'فیلتر کردن نقش ',
         'user list'=>'لیست کاربران',
 
         'users'=>[
@@ -14,6 +14,7 @@ return [
             'mobile'=>'تلفن همراه',
             'code_meli'=>'کد ملی',
             'birthday'=>'تاریخ  تولد',
+            'email'=>'ایمیل',
             'roles'=>'نقش',
             'actions'=>'عملیات',
         ],
@@ -32,10 +33,6 @@ return [
             'backup'=>'پشتیبان',
             'add role'=>'افزودن نقش',
             'descption roles'=>'اگر نقشی وجود ندارد اضافه کنید',
-
-
-
-
         ],
 
 

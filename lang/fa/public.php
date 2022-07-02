@@ -14,19 +14,36 @@ return [
 
     'menu'=>[
 
-        'title menu'=>'مدیریت سیستم',
+        'management'=>'مدیریت سیستم',
         'dashboard'=>'داشبور',
         'user'=>[
-            'users'=>'کارمندان',
+            'users'=>'اعضاء',
             'role'=>'سمت ها',
             'permission'=>'دسترسی ها',
         ],
-        'customer'=>[
-            'customers'=>'مشتری',
-            'create customer'=>'مشتری جدید',
-            'all customer'=>'همه ی مشتری ها',
-            'permission'=>'دسترسی ها',
+        'service'=>[
+            'service'=>'خدمات',
+            'customers'=>'مشتری ها',
+            'services'=>'مرکز ها'
         ],
+        'branch'=>[
+            'branch'=>'شعب و نمایندگان',
+            'envoy'=>'مشتری ها',
+            'marketer'=>'بازاریاب',
+            'branches'=>'شعبه',
+        ],
+        'accident'=>[
+            'accident'=>'حادثه',
+            'record accident'=>'ثبت حادثه',
+            'Follow up'=>'لیست حادثه'
+        ],
+        'car'=>[
+            'car'=>'ماشین',
+            'car list'=>'لیست ماشین ها',
+            'Follow up car'=>'ثبت ماشین جدید'
+        ],
+        'Stats'=>'آمار',
+        'list amount'=>'لیست در آمد',
     ]
 
 ];

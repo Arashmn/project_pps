@@ -90,6 +90,8 @@
 
     <!-- Page JS -->
     <script src="{{ asset('admin/js/pages-auth-multisteps.js') }}"></script>
+    <script src="{{ asset('admin/js/modal-enable-otp.js') }}"></script>
+
 </body>
 
 </html>

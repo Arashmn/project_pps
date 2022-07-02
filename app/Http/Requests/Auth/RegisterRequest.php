@@ -29,7 +29,7 @@ class RegisterRequest extends FormRequest
             'mobile'=>'required|unique:users|numeric|digits:11|regex:/(09)[0-9]{9}/',
             'code_meli'=>'required|unique:users|numeric|digits:10',
             'password'=>'required|confirmed',
-            'rules'=>['required',Rule::in(['1'])],
+            'rules'=>['required',Rule::in(['accept'])],
         ];
     }
 }
